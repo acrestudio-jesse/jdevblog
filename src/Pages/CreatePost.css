@@ -1,0 +1,50 @@
+.createPostPage{
+    background-color: #333;
+    max-width: 60rem;
+    margin: 4rem auto;
+    padding: 2rem;
+    color:beige;
+    border-radius: 30px;
+    box-shadow: 0 5px 10px #00000080;
+}
+
+h1 {
+    font-size: 2.2rem;
+    text-align: left;
+}
+
+label {
+    font-size: 2.2rem;
+    margin-bottom: .5rem;
+}
+
+.input{ 
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input input,textarea{
+    font-size: 1.6rem;
+}
+
+.input-text  textarea{
+    min-width: 50rem;
+    min-height: 15rem;
+}
+
+button {
+    padding: .8rem 1.5rem;
+    color: #f5f5dc;
+    border: 2px solid beige;
+    text-decoration: none;
+    transition: .5s;
+    cursor: pointer;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+button:hover{
+    background-color:#f5f5dc33;
+}

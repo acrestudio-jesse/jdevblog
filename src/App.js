@@ -1,23 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import Home from './Pages/Home';
+import Login from './Pages/Login';
+import CreatePost from './Pages/CreatePost';
+import NavBar from './Navigation/NavBar';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { auth } from './firebase-config';
 
 function App() {
+  const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+
+  let navigate = useNavigate();
+
+  const signUserOut = () => {
+    signOut(auth).then(() => {
+      localStorage.clear();
+      setIsAuth(false);
+      navigate('/login');
+    });
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar isAuth={isAuth} signOut={signUserOut} />
+
+      <Routes>
+        <Route exact path="/" element={<Home isAuth={isAuth} />}></Route>
+        <Route
+          exact
+          path="/create-post"
+          element={<CreatePost isAuth={isAuth} />}
+        ></Route>
+        <Route
+          exact
+          path="/login"
+          element={<Login setIsAuth={setIsAuth} />}
+        ></Route>
+      </Routes>
     </div>
   );
 }

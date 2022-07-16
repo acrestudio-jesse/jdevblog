@@ -1,3 +1,23 @@
+Created with React App:
+
+This is my first blog and my first time using my own back end through firebase. I would also like to build my own back=end in the future, but for now, I am enjoying this foray into work. I think I will add more checks for the authentication to make it difficult for other people to access the site, then I will begin to use this site as my own dev blog in the future.
+
+Features to be added:
+
+-upload images for blogs
+-author display image
+-pagination for posts
+-better layout design (CSS)
+-like/dislike
+
+In the future, I would like to integrate this feature into my porfolio so that there is an all in one spot to view the content I'll create during my dev history.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,27 @@
+.post {
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: #333;
+    text-align: left;
+    max-width: 800px;
+    font-size: 2rem;
+    color: beige;
+    box-shadow: 0 5px 10px black;
+}
+
+.post-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-post{
+    border: none;
+    padding: .5rem 1rem;
+    padding-top: .75rem;
+    border-radius: 10px;
+}
+
+.post-author{
+    margin-top: .7rem;
+}

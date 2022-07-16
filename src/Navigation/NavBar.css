@@ -1,0 +1,42 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+button{
+    background: none;
+    font-size: 2.4rem;
+}
+
+.nav-bar-container{
+    display: flex;
+    background-color: #333;
+justify-content: end;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    background-color: #333;
+    padding: 2rem;
+    max-width: 80rem;
+    margin: 0 17vw;
+}
+
+.nav-link{
+    padding: .8rem 1.5rem;
+    color: #f5f5dc;
+    border: 2px solid beige;
+    text-decoration: none;
+    transition: .5s;
+    cursor: pointer;
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.nav-link:hover{
+    background-color:#f5f5dc33;
+}
